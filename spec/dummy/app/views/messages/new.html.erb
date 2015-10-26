@@ -1,0 +1,22 @@
+<%= form_for @message do |f| %>
+  <div class="form-group">
+    <%= f.label :from %>
+    <%= f.text_field :from, class: "form-control", placeholder: "From" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :to %>
+    <%= f.text_field :to, class: "form-control", placeholder: "To" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_area :body, class: "form-control", placeholder: "Body" %>
+  </div>
+  <% if @message.errors.any? %>
+  <ul class="error">
+    <% @message.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+  <%= f.submit "Send" %>
+<% end %>

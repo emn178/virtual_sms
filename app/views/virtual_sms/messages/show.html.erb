@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>From</th>
+    <td>
+      <%= @message.from %>
+      <%= link_to '(Raw)', raw_message_path(:id => @message.id), :target => 'raw' %>
+    </td>
+  </tr>
+  <tr>
+    <th>To</th>
+    <td>
+      <%= @message.list_to %>
+    </td>
+  </tr>
+  <tr>
+    <th colspan="2">
+      Body
+    </th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <%= @message.body_tag %>
+    </td>
+  </tr>
+</table>

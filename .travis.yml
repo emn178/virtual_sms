@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.2.2
+before_install: gem install bundler
+branches:
+  only:
+    - master
+env:
+  - COVERALLS=1

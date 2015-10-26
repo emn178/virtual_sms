@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>
+      Virtual SMS Box
+    </title>
+    <%= stylesheet_link_tag    "virtual_sms/application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "virtual_sms/application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <h2>
+      <%= link_to 'Virtual SMS Box', messages_path %>
+    </h2>
+    <%= yield %>
+  </body>
+</html>

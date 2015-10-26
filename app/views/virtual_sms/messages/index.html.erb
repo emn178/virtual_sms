@@ -1,0 +1,27 @@
+<%= link_to 'Clear', clear_messages_path, :method => :delete, :data => {:confirm => "Are you sure?"} %>
+<table>
+  <colgroup>
+    <col width="250px"></col>
+    <col width="300px"></col>
+    <col></col>
+    <col width="200px"></col>
+  </colgroup>
+  <tr>
+    <th>From</th>
+    <th>To</th>
+    <th>Body</th>
+  </tr>
+  <% @messages.each do |message| %>
+    <tr>
+      <td>
+        <%= message.from %>
+      </td>
+      <td>
+        <%= message.to %>
+      </td>
+      <td>
+        <%= link_to message.body, message_path(:id => message.id) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
