@@ -1,6 +1,6 @@
 # Virtual SMS
 
-[![Build Status](https://api.travis-ci.org/emn178/virtual_sms.png)](https://travis-ci.org/emn178/virtual_sms)  
+[![Build Status](https://api.travis-ci.org/emn178/virtual_sms.png)](https://travis-ci.org/emn178/virtual_sms)
 [![Coverage Status](https://coveralls.io/repos/emn178/virtual_sms/badge.svg?branch=master)](https://coveralls.io/r/emn178/virtual_sms?branch=master)
 
 A rails plugin that provides a virtual SMS box and [SMS Carrier](https://github.com/emn178/sms_carrier) delivery method. You can send SMS to this virtual SMS box instead of real SMS service in development environment, and you can preview the SMSes in this virtual SMS box in web page.
