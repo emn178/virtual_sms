@@ -4,12 +4,13 @@ module VirtualSms
   class Message
     include ActionView::Helpers::TagHelper
 
-    attr_accessor :sms
+    attr_accessor :sms, :date
     delegate :body, :from, to: :sms
 
     def initialize(sms)
       @sms = sms
       @sms[:sms_id] = SecureRandom.uuid
+      self.date = Time.now
     end
 
     def id

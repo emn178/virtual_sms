@@ -32,6 +32,10 @@ RSpec.describe VirtualSms::Message do
     its(:list_to) { should eq "+886912345678, +886963852741" }
   end
 
+  describe "#date" do
+    its(:date) { should_not eq nil }
+  end
+
   describe "#body" do
     its(:body) { should eq body }
   end

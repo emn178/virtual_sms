@@ -10,8 +10,9 @@
     <th>From</th>
     <th>To</th>
     <th>Body</th>
+    <th>Date</th>
   </tr>
-  <% @messages.each do |message| %>
+  <% @messages.reverse_each do |message| %>
     <tr>
       <td>
         <%= message.from %>
@@ -21,6 +22,9 @@
       </td>
       <td>
         <%= link_to message.body, message_path(:id => message.id) %>
+      </td>
+      <td>
+        <%= message.date  %>
       </td>
     </tr>
   <% end %>
