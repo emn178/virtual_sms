@@ -29,7 +29,7 @@ module VirtualSms
     end
 
     def body_tag
-      content_tag :pre, body unless body.nil? 
+      content_tag :pre, body unless body.nil?
     end
 
     def raw
@@ -37,7 +37,7 @@ module VirtualSms
     end
 
     def self.all
-      messages = Rails.cache.fetch(CacheKey) do
+      messages = cache.fetch(CacheKey) do
         messages = []
       end
       messages
@@ -50,7 +50,11 @@ module VirtualSms
     end
 
     def self.clear
-      Rails.cache.delete(CacheKey)
+      cache.delete(CacheKey)
+    end
+
+    def self.cache
+      @cache ||= ActiveSupport::Cache::FileStore.new('tmp/virtual_sms')
     end
   end
 end

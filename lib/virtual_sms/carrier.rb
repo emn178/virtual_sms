@@ -9,7 +9,7 @@ module VirtualSms
     def deliver!(sms)
       messages = VirtualSms::Message.all
       messages << VirtualSms::Message.new(sms)
-      Rails.cache.write(CacheKey, messages)
+      Message.cache.write(CacheKey, messages)
     end
   end
 end

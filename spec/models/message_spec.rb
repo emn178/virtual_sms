@@ -50,7 +50,7 @@ RSpec.describe VirtualSms::Message do
 
   describe ".clear" do
     after { VirtualSms::Message.clear }
-    it { expect(Rails.cache).to receive(:delete).with(VirtualSms::CacheKey) }
+    it { expect(VirtualSms::Message.cache).to receive(:delete).with(VirtualSms::CacheKey) }
   end
 
   describe ".all" do
@@ -64,7 +64,7 @@ RSpec.describe VirtualSms::Message do
     context "with cache" do
       subject { VirtualSms::Message.all }
       let(:messages) { [message, message] }
-      before { allow(Rails.cache).to receive(:fetch).with(VirtualSms::CacheKey).and_return(messages) }
+      before { allow(VirtualSms::Message.cache).to receive(:fetch).with(VirtualSms::CacheKey).and_return(messages) }
       its(:length) { should eq 2 }
     end
   end
