@@ -1,0 +1,19 @@
+<script>
+  function clearMessages() {
+    if (!confirm('Are you sure you want to clear all messages?')) {
+      return;
+    }
+
+    var csrfTokenElement = document.querySelector('meta[name="csrf-token"]');
+    var csrfToken = csrfTokenElement ? csrfTokenElement.content : null;
+
+    fetch('clear', {
+      method: 'DELETE',
+      headers: {
+        'X-CSRF-Token': csrfToken
+      }
+    }).then(function() {
+      location.reload();
+    });
+  }
+</script>

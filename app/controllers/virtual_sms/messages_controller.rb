@@ -15,7 +15,7 @@ module VirtualSms
 
     def clear
       VirtualSms::Message.clear
-      redirect_to messages_path
+      head :ok
     end
 
     private

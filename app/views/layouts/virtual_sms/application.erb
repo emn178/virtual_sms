@@ -4,8 +4,7 @@
     <title>
       Virtual SMS Box
     </title>
-    <%= stylesheet_link_tag    "virtual_sms/application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "virtual_sms/application", "data-turbolinks-track" => true %>
+    <%= render "layouts/virtual_sms/styles/application" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -13,5 +12,6 @@
       <%= link_to 'Virtual SMS Box', messages_path %>
     </h2>
     <%= yield %>
+    <%= render "layouts/virtual_sms/javascripts/application" %>
   </body>
 </html>

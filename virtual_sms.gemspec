@@ -18,11 +18,10 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 4.2.0"
   s.add_dependency "sms_carrier"
-  s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "bundler", "~> 1.10"
-  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "bundler"
+  s.add_development_dependency "rake"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "rspec-its"
   s.add_development_dependency "simplecov"
