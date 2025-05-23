@@ -12,10 +12,6 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'virtual_sms', group: :development
 ```
-Make sure you have:
-```ruby
-gem 'jquery-rails'
-```
 
 And then execute:
 
@@ -41,5 +37,5 @@ Now, you can go to http://localhost:3000/virtual_sms and check the SMSes!
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
 ## Contact
-The project's website is located at https://github.com/emn178/virtual_sms  
+The project's website is located at https://github.com/emn178/virtual_sms
 Author: emn178@gmail.com

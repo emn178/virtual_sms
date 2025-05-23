@@ -6,8 +6,7 @@
 
     var csrfTokenElement = document.querySelector('meta[name="csrf-token"]');
     var csrfToken = csrfTokenElement ? csrfTokenElement.content : null;
-
-    fetch('clear', {
+    fetch(document.querySelector('[data-clear-path]').dataset.clearPath, {
       method: 'DELETE',
       headers: {
         'X-CSRF-Token': csrfToken
