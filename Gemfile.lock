@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    virtual_sms (0.3.0)
+    virtual_sms (0.3.1)
       rails (>= 4.2.0)
       sms_carrier
 
